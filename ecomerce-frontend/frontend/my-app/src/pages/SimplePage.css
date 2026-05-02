@@ -1,0 +1,72 @@
+/* src/pages/SimplePage.css */
+.simplePage{
+  min-height: 70vh;
+  padding: 90px 16px 40px;
+  background: #eaf2ec;
+}
+
+.simpleCard{
+  max-width: 900px;
+  margin: 0 auto;
+  background: #f7fbf7;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.simpleCard h1{
+  margin: 0 0 10px;
+}
+
+.muted{
+  opacity: .7;
+}
+
+.simpleGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.simpleGrid ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.simpleForm{
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.simpleForm input,
+.simpleForm textarea{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  outline: none;
+  background: #fff;
+}
+
+.simpleForm button{
+  width: fit-content;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #2f5b4a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.simpleInfo{
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+@media (max-width: 700px){
+  .simpleGrid{ grid-template-columns: 1fr; }
+}

@@ -1,0 +1,136 @@
+/* simple footer like your reference */
+.ft { font-family: Arial, sans-serif; }
+
+/* top bar */
+.ftTop{
+  background: #BFEDE3;               /* mint bar */
+  padding: 26px 0;
+}
+.ftWrap{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+.ftTopRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+.ftTop h3{
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+.ftTop p{
+  margin: 0;
+  font-size: 13px;
+  opacity: .75;
+}
+
+/* top form */
+.ftForm{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.ftForm input{
+  width: 280px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.12);
+  outline: none;
+  background: rgba(255,255,255,.55);
+}
+.ftForm button{
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #FF6B4A;              /* orange button */
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* main footer */
+.ftMain{
+  background: #3E7F6F;              /* green footer */
+  color: #fff;
+  padding: 40px 0 16px;
+}
+.ftGrid{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+.ftBrand h4{
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+}
+.ftBrand p{
+  margin: 0 0 14px;
+  font-size: 13px;
+  opacity: .88;
+  line-height: 1.6;
+}
+
+/* small email box inside footer */
+.ftMiniForm{
+  display: flex;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 260px;
+}
+.ftMiniForm input{
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+}
+.ftMiniForm input::placeholder{ color: rgba(255,255,255,.75); }
+.ftMiniForm button{
+  width: 44px;
+  border: none;
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* links */
+.ftCol h5{
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: .95;
+}
+.ftCol a{
+  display: block;
+  color: rgba(255,255,255,.86);
+  text-decoration: none;
+  margin-bottom: 9px;
+  font-size: 13px;
+}
+.ftCol a:hover{ color: #fff; }
+
+/* copyright */
+.ftCopy{
+  margin-top: 22px;
+  text-align: center;
+  font-size: 12px;
+  opacity: .85;
+  border-top: 1px solid rgba(255,255,255,.18);
+  padding-top: 12px;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .ftTopRow{ flex-direction: column; align-items: flex-start; }
+  .ftForm input{ width: 100%; }
+  .ftGrid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px){
+  .ftGrid{ grid-template-columns: 1fr; }
+}

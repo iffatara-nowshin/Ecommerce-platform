@@ -1,0 +1,201 @@
+/* Page background like the template */
+.plPage{
+  background: #887c72;            /* beige outer */
+  min-height: 100vh;
+  padding: 26px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Rounded big container */
+.plWrap{
+  width: min(1080px, 92%);
+  margin: 0 auto;
+  background: #5f4224;            /* inner beige */
+  border-radius: 22px;
+  padding: 22px;
+  border: 1px solid rgba(60,40,20,.12);
+}
+
+/* Header row */
+.plHead{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 10px 0 14px;
+}
+
+.plHead h2,
+.plHead h3{
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: #f9f9f8;
+}
+
+.plArrows{
+  display: flex;
+  gap: 8px;
+}
+
+.iconBtn{
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(95, 70, 38, 0.18);
+  background: rgba(255,255,255,.35);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: #3A2A1E;
+}
+
+/* Categories row */
+.catRow{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.catCard{
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(60,40,20,.12);
+  background: rgba(255,255,255,.25);
+}
+
+.catImg{
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #F3ECE4;
+}
+
+.catImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.catTag{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: rgba(58,42,30,.85);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* Sections */
+.plSection{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(60,40,20,.10);
+}
+
+/* Product row scroll like the template */
+.prodRow{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 240px;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.prodRow::-webkit-scrollbar{
+  height: 8px;
+}
+.prodRow::-webkit-scrollbar-thumb{
+  background: rgba(60,40,20,.20);
+  border-radius: 999px;
+}
+
+/* Product card */
+.prodCard{
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(60,40,20,.12);
+  background: rgba(255,255,255,.30);
+  scroll-snap-align: start;
+}
+
+/* Heart icon like small circle */
+.heartBtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(60,40,20,.15);
+  background: rgba(255,255,255,.55);
+  cursor: pointer;
+}
+
+/* Image box: no ugly crop, fills nicely */
+.prodImg{
+  aspect-ratio: 4 / 5;
+  background: #F3ECE4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prodImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* template look */
+  display: block;
+}
+
+/* Info area */
+.prodInfo{
+  padding: 12px 12px 14px;
+}
+
+.prodName{
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #3A2A1E;
+  opacity: .92;
+}
+
+.prodBottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.prodPrice{
+  color: #3A2A1E;
+}
+
+/* Add to cart button (small brown pill) */
+.addBtn{
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(160,110,55,.90);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+/* Responsive */
+@media (max-width: 1000px){
+  .catRow{ grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px){
+  .catRow{ grid-template-columns: repeat(2, 1fr); }
+  .prodRow{ grid-auto-columns: 210px; }
+}

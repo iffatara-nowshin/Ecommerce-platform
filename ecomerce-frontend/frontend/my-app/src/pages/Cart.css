@@ -1,0 +1,262 @@
+/* Background like the reference (soft pink/cream) */
+.cartPage{
+  min-height: 100vh;
+  padding: 40px 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,192,203,.35), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(255,210,220,.35), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(255,210,220,.25), transparent 55%),
+    #F6E6E4;
+  font-family: Arial, sans-serif;
+}
+
+/* main card container */
+.cartWrap{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  background: #F3E2E0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  box-shadow: 0 18px 50px rgba(0,0,0,.10);
+}
+
+/* LEFT */
+.cartLeft{
+  background: #fff;
+  padding: 28px 28px 24px;
+}
+
+.cartHead{
+  display: grid;
+  grid-template-columns: 1.4fr .6fr .6fr .6fr;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,.55);
+  padding: 8px 0 16px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.cartRow{
+  display: grid;
+  grid-template-columns: 1.4fr .6fr .6fr .6fr;
+  gap: 10px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  align-items: center;
+}
+
+/* product cell */
+.cartProd{
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.xBtn{
+  position: absolute;
+  left: -8px;
+  top: -6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: rgba(0,0,0,.6);
+}
+
+.thumb{
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #F3E2E0;
+  border: 1px solid rgba(0,0,0,.08);
+  flex: 0 0 auto;
+}
+
+.thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.prodText h4{
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.muted{
+  margin: 0;
+  font-size: 11px;
+  color: rgba(0,0,0,.55);
+  line-height: 1.5;
+}
+
+/* price/total */
+.cartPrice,
+.cartTotal{
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* qty */
+.qtyBox{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  user-select: none;
+}
+
+.qtyBox button{
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.14);
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.qtyBox span{
+  min-width: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Note */
+.noteBox{
+  padding-top: 18px;
+}
+
+.noteTitle{
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,.55);
+  margin: 0 0 10px;
+}
+
+.noteBox input{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.12);
+  outline: none;
+  background: #fff;
+}
+
+/* RIGHT */
+.cartRight{
+  background: #F3E2E0;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightInner{
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+}
+
+.line{
+  height: 2px;
+  width: 110px;
+  background: rgba(0,0,0,.75);
+  margin: 0 auto 26px;
+  border-radius: 999px;
+}
+
+.smallTitle{
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,.55);
+}
+
+.grand{
+  margin: 12px 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.smallMuted{
+  margin: 0 0 18px;
+  font-size: 11px;
+  color: rgba(0,0,0,.55);
+}
+
+.agree{
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: rgba(0,0,0,.65);
+  margin-bottom: 18px;
+}
+
+.agree a{
+  color: rgba(0,0,0,.75);
+  text-decoration: underline;
+}
+
+.checkoutBtn{
+  width: 180px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.paypalBtn{
+  width: 180px;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font-weight: 800;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,.14);
+}
+
+.checkoutBtn:disabled,
+.paypalBtn:disabled{
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* small bag icon like faded logo */
+.bagIcon{
+  margin-top: 24px;
+  font-size: 44px;
+  opacity: .12;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .cartWrap{
+    grid-template-columns: 1fr;
+  }
+  .cartRight{
+    padding: 20px 18px 26px;
+  }
+}

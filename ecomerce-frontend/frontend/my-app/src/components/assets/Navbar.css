@@ -1,0 +1,138 @@
+/* Top promo bar */
+.top-promo {
+  background: #60938a;
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+  padding: 8px 16px;
+  letter-spacing: 0.05em;
+}
+
+/* Main navbar */
+.site-header {
+  background: #f6faf6;
+  border-bottom: 1px solid #e4e6ea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-inner {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.brand-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #030303;
+  text-decoration: none;
+}
+
+/* Center menu */
+.main-nav {
+  display: flex;
+  gap: 26px;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: #0a0a0a;
+  text-decoration: none;
+  padding-bottom: 4px;
+  position: relative;
+  letter-spacing: 0.05em;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #0b0f19;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 22px;
+  background: #6d9f97;
+  border-radius: 999px;
+}
+
+/* Right actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-account {
+  font-size: 20px;
+  color: #060b11;
+  text-decoration: none;
+}
+
+.nav-account:hover {
+  color: #06090f;
+}
+
+/* Cart button */
+.cart-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid #ced2e0;
+  background: #f8fafc;
+  padding: 6px 12px;
+  font-size: 20px;
+  color: #0a101f;
+  text-decoration: none;
+}
+
+.cart-button:hover {
+  background: #e7edf5;
+}
+
+.cart-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.cart-count {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6d9f97;
+  color: #ffffff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-nav {
+    display: none;
+  }
+
+  .brand-logo {
+    font-size: 20px;
+  }
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+

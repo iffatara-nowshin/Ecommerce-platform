@@ -1,0 +1,106 @@
+/* src/pages/Checkout.css */
+.ckPage{
+  min-height: 70vh;
+  padding: 90px 16px 40px;
+  background: #eaf2ec;
+}
+
+.ckWrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 18px;
+}
+
+.ckLeft{
+  background: #f7fbf7;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.ckRight .ckCard{
+  background: #f7fbf7;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  position: sticky;
+  top: 90px;
+}
+
+.ckMuted{ opacity: .7; margin: 6px 0 14px; }
+
+.ckForm{
+  display: grid;
+  gap: 12px;
+}
+
+.ckForm input,
+.ckForm textarea,
+.ckForm select{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  outline: none;
+}
+
+.ckRow{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ckBtn{
+  width: fit-content;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #2f5b4a;
+  color: #fff;
+  cursor: pointer;
+}
+.ckBtn:disabled{
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.ckItems{ display: grid; gap: 12px; margin-top: 12px; }
+.ckItem{
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+.ckItem img{
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.ckLine{
+  height: 1px;
+  background: rgba(0,0,0,.08);
+  margin: 14px 0;
+}
+
+.ckTotalRow, .ckGrand{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ckGrand{
+  font-size: 18px;
+}
+
+@media (max-width: 900px){
+  .ckWrap{ grid-template-columns: 1fr; }
+  .ckRight .ckCard{ position: static; }
+  .ckRow{ grid-template-columns: 1fr; }
+}

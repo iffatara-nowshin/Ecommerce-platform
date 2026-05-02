@@ -1,0 +1,209 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;600&display=swap");
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background image layer */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.03);
+  filter: brightness(1.05);
+
+  z-index: 0;
+
+  /*  background animation */
+  animation: heroBgZoom 7s ease-out both;
+}
+
+/* Dark overlay for readability */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.30)
+  );
+
+  z-index: 1;
+
+  /*  overlay fade */
+  animation: heroFade 900ms ease-out both;
+}
+
+/* Content always on top */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/*  master animation trigger */
+.hero-animate {
+  animation: heroFade 900ms ease-out both;
+}
+
+/* ================= HERO TEXT ================= */
+
+.hero-title {
+  font-family: "Cinzel", serif;
+  font-size: clamp(3rem, 5vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: 0.5em;
+
+  color: #ffffff;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.75);
+
+  /*  title pop */
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  animation: heroPop 950ms cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 140ms;
+}
+
+.hero-subtitle {
+  margin-top: 18px;
+
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+
+  /*  subtitle rise */
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroRise 900ms cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 320ms;
+}
+
+/* Divider line */
+.hero-divider {
+  width: 260px;
+  height: 2px;
+  margin: 22px auto;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  /*  divider draw */
+  opacity: 0;
+  transform: scaleX(0.2);
+  transform-origin: center;
+  animation: heroLine 900ms ease-out both;
+  animation-delay: 430ms;
+}
+
+/* ================= HERO BUTTON ================= */
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 28px;
+
+  padding: 14px 44px;
+
+  font-family: "Lato", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #ffffff;
+
+  border: 4px solid #ffffff;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+
+  transition: all 0.35s ease;
+
+  /*  button rise */
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroRise 900ms cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 560ms;
+
+  /*  subtle hover shine */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-btn::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 60%);
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+.hero-btn:hover::after{
+  opacity: 1;
+}
+
+.hero-btn:hover {
+  background: rgba(249, 244, 244, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes heroFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes heroBgZoom {
+  from { transform: scale(1.14); }
+  to   { transform: scale(1.03); }
+}
+
+@keyframes heroPop {
+  0%   { opacity: 0; transform: translateY(18px) scale(0.98); }
+  60%  { opacity: 1; transform: translateY(-2px) scale(1.01); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroLine {
+  from { opacity: 0; transform: scaleX(0.2); }
+  to   { opacity: 1; transform: scaleX(1); }
+}
+
+/* ✅ accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg,
+  .hero-overlay,
+  .hero-animate,
+  .hero-title,
+  .hero-subtitle,
+  .hero-divider,
+  .hero-btn {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
